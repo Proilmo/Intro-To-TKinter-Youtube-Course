@@ -7,7 +7,7 @@ e = Entry(root, width=35, borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
 #e.insert(0, "")
-
+math = 0
 def button_click(number):
 	#e.delete(0, END)
 	current = e.get()
@@ -28,7 +28,8 @@ def button_add():
 def button_equal():
 	second_number = e.get()
 	e.delete(0, END)
-	
+	if math == 0:
+		e.insert(0, int(second_number))
 	if math == "addition":
 		e.insert(0, f_num + int(second_number))
 
